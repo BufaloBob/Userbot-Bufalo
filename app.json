@@ -1,7 +1,6 @@
 {
   "name": "X-tra Telegram",
-  "description": "Userbot created by a SNAPDRAGON and custom fork by The_Killer_Bob",
-  "logo": "https://drive.google.com/file/d/1BbtxSZpHD4nq5ME_fC-7ux0BCdq3ppU_/view?usp=sharing",
+  "description": "Userbot created by a SNAPDRAGON and custom fork by The_Killer_Bob\n\n join https://t.me/XtraTgChat for any problems or support",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +8,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/BufaloBob/Userbot-Bufalo/",
+  "repository": "https://github.com/Dark-Princ3/X-tra-Telegram/",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
