@@ -84,6 +84,26 @@
       "value": "",
       "required": false
     },
+     "PRIVATE_GROUP_BOT_API_ID": {
+      "description": "create private group and add rose then type /id",
+      "value": ""
+    },
+    "PRIVATE_GROUP_ID": {
+      "description": "create private group and add rose then type /id",
+      "value": ""
+    },
+    "HEROKU_API_KEY": {
+      "description": "your heroku api key",
+      "value": ""
+    },
+    "HEROKU_APP_NAME": {
+      "description": "the name of your bot",
+      "value": ""
+    },
+    "ALIVE_NAME": {
+      "description": "The name you want to show",
+      "value": ""
+    },
     "DOWNLOAD_PFP_URL_CLOCK": {
       "description": "Needed for autopic module. A url that is a preview link of your Profile Pic",
       "value": "",
