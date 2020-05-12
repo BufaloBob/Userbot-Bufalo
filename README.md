@@ -20,6 +20,6 @@ Simply just leave the Config as it is.
     - `API_HASH`:   You can get this value from https://my.telegram.org
 - The userbot will not work without setting the mandatory vars.
 
-## CHECK THS SUPER SHOPPY
+# CHECK THS SUPER SHOPPY
 
-[![Shoppy](https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/2614576/580/386/m2/fpnw/wm0/preview_01-.jpg?1493457806&s=54dabd1e55b71b8489c79366818e6209)](https://shoppy.gg/@The_Killer_Bob)
+[![Shoppy](https://www.smartebusiness.co.uk/integrations/assets/software_logos/selly.png)](https://shoppy.gg/@The_Killer_Bob)
