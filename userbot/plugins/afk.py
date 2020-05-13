@@ -46,9 +46,9 @@ async def _(event):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
         USER_AFK = f"yes: {reason}"  # pylint:disable=E0602
         if reason:
-            await borg.send_message(event.chat_id, f"**     ⚠️ AL MOMENTO SONO OFFLINE.** **\nQUINDI NON SPAMMATE NELLA CHAT, GRAZIE 🌈** **\nRISPONDERO APPENA SONO DISPONIBILE! \n〽️** __MOTIVO ~ {reason}__ \n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n**.     ⚠️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🌈** \n**I'LL AWNSER AS SOON AS POSIBLE! \n〽️** __REASON ~ {reason}__")
+            await borg.send_message(event.chat_id, f"**     ⚠️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🌈** \n**I'LL AWNSER AS SOON AS POSIBLE! \n〽️** __REASON ~ {reason}__")
         else:
-            await borg.send_message(event.chat_id, f"**  🔒 __adesso sono AFK__  **\n\n- - - - - -\n\n**🔒 __i'm now AFK__**")
+            await borg.send_message(event.chat_id, f"**🔒 __i'm now AFK__**")
         await asyncio.sleep(5)
         await event.delete()
         try:
@@ -73,7 +73,7 @@ async def set_not_afk(event):
         total_afk_time = str((afk_end - afk_start))
     current_message = event.message.message
     if ".afk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
-        shite = await borg.send_message(event.chat_id, "__🎲 ** Non sono più AFK! **  🎲 __\n**🔸 Ora puoi scrivermi.**\n**🔹 Sono stato afk per:**" + total_afk_time + "\n **__UserBot afk system by MyFriendAnon__**")
+        shite = await borg.send_message(event.chat_id, "__🌴 ** Non sono più AFK! **  🌴 __\n**🩸 Ora puoi scrivermi.**\n**🩸 Sono stato afk per:**" + total_afk_time + "\n **__AFK SISTEM BY THE_KILLER_BOB__**")
         try:
             await borg.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
@@ -146,10 +146,10 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **fa**"
         msg = None
-        message_to_reply = f"**     ⚠️ AL MOMENTO SONO OFFLINE.** **\nQUINDI NON SPAMMATE NELLA CHAT, GRAZIE 🌈** **\nRISPONDERO APPENA SONO DISPONIBILE! \n〽️** __AFK DA ~ `{total_afk_time}`__ \n__🔸 MOTIVO ~ {reason}__ \n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n**     ⚠️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🌈** \n**I'LL AWNSER AS SOON AS POSIBLE!" + \
-                           f"\n〽️** __AFK FOR ~ `{total_afk_time}`__ \n__🔸 REASON ~ {reason}__" \
+        message_to_reply = f"**     ⚠️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🔥** \n**I'LL AWNSER AS SOON AS POSIBLE!" + \
+                           f"\n☀️** __AFK FOR ~ `{total_afk_time}`__ \n__✨ REASON ~ {reason}__" \
                            if reason \
-                           else f"**     ⚠️ AL MOMENTO SONO OFFLINE.** **\nQUINDI NON SPAMMATE NELLA CHAT, GRAZIE 🌈** **\nRISPONDERO APPENA SONO DISPONIBILE! \n〽️** __AFK DA ~ `{total_afk_time}`__ \n\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n\n**     ⚠️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🌈** \n**I'LL AWNSER AS SOON AS POSIBLE! \n〽️** __AFK FOR ~ `{total_afk_time}`__"
+                           else f"**     ⚠️ AT THE MOMENT I'M OFFLINE.**\n**SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🔥** \n**I'LL AWNSER AS SOON AS POSIBLE! \n☀️** __AFK FOR ~ `{total_afk_time}`__"
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
