@@ -16,7 +16,7 @@ USER_BOT_WARN_ZERO = "𝖸𝗈𝗎 𝖶𝖾𝗋𝖾 𝖲𝗉𝖺𝗆𝗆𝗂𝗇
 USER_BOT_NO_WARN = ("[𝑺𝑻𝑶𝑷 𝑺𝑷𝑨𝑴𝑴𝑰𝑵𝑮 𝑶𝑹 𝑰'𝑳𝑳 𝑩𝑳𝑶𝑪𝑲 𝒀𝑶𝑼](tg://user?id=528569326)\n\n"
                     "__ 𝐻𝑒𝑙𝑙𝑜, 𝑡ℎ𝑖𝑠 𝑖𝑠 𝐾𝑖𝑙𝑙𝑒𝑟'𝑠 𝑆𝑒𝑐𝑢𝑟𝑖𝑡𝑦 𝑆𝑒𝑟𝑣𝑖𝑐𝑒.\n 𝑌𝑜𝑢'𝑟𝑒 𝑇𝑟𝑦𝑖𝑛𝑔 𝑇𝑜 𝐶𝑜𝑛𝑡𝑎𝑐𝑡 𝑀𝑦 𝐵𝑜𝑠𝑠.__"
                     f"{DEFAULTUSER}'s` inbox.\n\n"
-                    "** Send** `/start` ** so that we can decide why you're here.**")
+                    "**Send /start so that we can decide why you're here.**")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
