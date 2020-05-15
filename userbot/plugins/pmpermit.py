@@ -12,11 +12,10 @@ CACHE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No name set yet nibba, check pinned message in** @TheKillerBob"
-USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your retarded lame ass has been blocked by my master's userbot.` **Now GTFO, i'm playing minecraft** "
-USER_BOT_NO_WARN = ("[STOP SPAMMING OR I'LL BLOCK YOU](tg://user?id=528569326)\n\n"
-                    "`Hello, this is X-tra-Telegram Security Service.You have found your way here to my master,`"
+USER_BOT_WARN_ZERO = "𝖸𝗈𝗎 𝖶𝖾𝗋𝖾 𝖲𝗉𝖺𝗆𝗆𝗂𝗇𝗀 𝖬𝗒 𝖡𝗈𝗌𝗌'𝗌 𝖨𝗇𝖻𝗈𝗑, 𝖧𝖾𝗇𝖼𝖾𝖿𝗈𝗋𝗍𝗁 𝖸𝗈𝗎𝗋 𝗋𝖾𝗍𝖺𝗋𝖽𝖾𝖽 𝖠𝗌𝗌 𝖧𝖺𝗌 𝖡𝖾𝖾𝗇 𝖡𝗅𝗈𝖼𝗄𝖾𝖽 𝖡𝗒 𝖬𝗒 𝖡𝗈𝗌𝗌'𝗌 𝖴𝗌𝖾𝗋𝖻𝗈𝗍."
+USER_BOT_NO_WARN = ("[𝑺𝑻𝑶𝑷 𝑺𝑷𝑨𝑴𝑴𝑰𝑵𝑮 𝑶𝑹 𝑰'𝑳𝑳 𝑩𝑳𝑶𝑪𝑲 𝒀𝑶𝑼](tg://user?id=528569326)\n\n"
+                    "__ 𝐻𝑒𝑙𝑙𝑜, 𝑡ℎ𝑖𝑠 𝑖𝑠 𝐾𝑖𝑙𝑙𝑒𝑟'𝑠 𝑆𝑒𝑐𝑢𝑟𝑖𝑡𝑦 𝑆𝑒𝑟𝑣𝑖𝑐𝑒.\n 𝑌𝑜𝑢'𝑟𝑒 𝑇𝑟𝑦𝑖𝑛𝑔 𝑇𝑜 𝐶𝑜𝑛𝑡𝑎𝑐𝑡 𝑀𝑦 𝐵𝑜𝑠𝑠.__"
                     f"{DEFAULTUSER}'s` inbox.\n\n"
-                    "Leave your name, phone number, address and 10k$ and hopefully you'll get a reply within 2 light years.`\n\n"
                     "** Send** `/start` ** so that we can decide why you're here.**")
 
 
@@ -51,7 +50,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             if not pmpermit_sql.is_approved(chat.id):
                 if not chat.id in PM_WARNS:
                     pmpermit_sql.approve(chat.id, "outgoing")
-                    bruh = "__Added user to approved pms cuz outgoing message >~<__"
+                    bruh = "__𝑇ℎ𝑖𝑠 𝑁𝑖𝑏𝑏𝑎 𝑊𝑎𝑠 𝐴𝑝𝑝𝑟𝑜𝑣𝑒𝑑 𝐵𝑒𝑐𝑎𝑢𝑠𝑒 𝑌𝑜𝑢 𝑊𝑟𝑜𝑡𝑒 𝑇𝑜 𝐻𝑖𝑚__"
                     rko = await borg.send_message(event.chat_id, bruh)
                     await asyncio.sleep(3)
                     await rko.delete()
@@ -68,7 +67,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit("OKEY BLOCKING.... \n\nFuck Off Bitch, Now You Can't Message Me..[{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit("𝖮𝖪𝖤𝖸 𝖡𝖫𝖮𝖢𝖪𝖨𝖭𝖦... \n\n𝖥𝗎𝖼𝗄 𝖮𝖿𝖿 𝖡𝗂𝗍𝖼𝗁, 𝖭𝗈𝗐 𝖸𝗈𝗎 𝖢𝖺𝗇'𝗍 𝖬𝖾𝗌𝗌𝖺𝗀𝖾 𝖬𝖾..[{}](tg://user?id={})".format(firstname, chat.id))
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
