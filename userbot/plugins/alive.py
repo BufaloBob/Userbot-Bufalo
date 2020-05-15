@@ -11,10 +11,9 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "unknown"
 @command(outgoing=True, pattern="^.alive$")
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
-    await alive.edit(" ╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗\n ║║║╠─║─║─║║║║║╠─n\ ╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝\n"
-	             "**🎲 __THE_KILLER_BOB USERBOT STATUS__ 🎲**\n\n"
-                     "⭐️Tetethon Version: 7.0.1\n⭐️Python Version: 3.8.0\n🥶**SUPPORT & UPDATE: I CAN SUPPORT YOU **\n"
-                     "🥶**CUSTOM BOT CREATOR:** [The_Killer_Bob](tg://user?id=) **\n"
-                     "⭐️**CPU:** Ok \n\n🎲 **__USER DATA__** 🎲\n"
-                     f"🥶 **USER:** __{DEFAULTUSER}__\n"
+    await alive.edit("**🎲 __THE_KILLER_BOB USERBOT STATUS__ 🎲**\n\n"
+                     "⭐️Tetethon Version: 7.0.1\n⭐️Python Version: 3.8.0\n🥶**SUPPORT & UPDATE: I CAN SUPPORT YOU **\n\n"
+                     "🥶**CUSTOM BOT CREATOR:** [The_Killer_Bob](tg://user?id=) **\n\n"
+                     "⭐️**CPU:** Ok \n\n🎲 **__USER DATA__** 🎲\n\n"
+                     f"🥶 **USER:** __{DEFAULTUSER}__\n\n"
                      "🥶[SHOPPY](https://shoppy.gg/@The_Killer_Bob)")
