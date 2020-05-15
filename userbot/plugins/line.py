@@ -36,7 +36,7 @@ async def alert(event):
     if me.last_name == "🚫 𝑂𝐹𝐹𝐿𝐼𝑁𝐸":
         now = datetime.now()
         time = str((now - timeset))[:-6]
-        await event.reply(f"""⚠️ AT THE MOMENT I'M OFFLINE.
-SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🔥 
+        await event.reply(f"""⚠️ 𝐀𝐓 𝐓𝐇𝐄 𝐌𝐎𝐌𝐄𝐍𝐓 𝐈'𝐌 𝐎𝐅𝐅𝐋𝐈𝐍𝐄.
+𝐒𝐎 𝐏𝐋𝐄𝐀𝐒𝐄 𝐃𝐎𝐍'𝐓 𝐒𝐏𝐀𝐌 𝐈𝐍 𝐌𝐘 𝐂𝐇𝐀𝐓, 𝐓𝐇𝐀𝐍𝐊𝐒 🔥 
 I'LL ANSWER AS SOON AS POSIBLE! 
-☀️ AFK FOR ~ {time}""")
+☀️ OFFLINE FOR ~ {time}""")
