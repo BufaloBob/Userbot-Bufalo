@@ -60,4 +60,4 @@ async def alert(event):
         time = str((now - timeset))[:-6]
         await event.reply(f"""⚠️ AT THE MOMENT I'M STUDYING.
 SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🔥 
-I'LL ANSWER AS SOON AS POSIBLE!}""")
+I'LL ANSWER AS SOON AS POSIBLE!""")
