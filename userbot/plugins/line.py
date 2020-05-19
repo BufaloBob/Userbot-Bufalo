@@ -44,10 +44,10 @@ async def alert(event):
     if me.last_name == "🚫 𝑂𝐹𝐹𝐿𝐼𝑁𝐸":
         now = datetime.now()
         time = str((now - timeset))[:-6]
-        await event.reply(f"""⚠️ AT THE MOMENT I'M OFFLINE.
-SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🔥 
-I'LL ANSWER AS SOON AS POSIBLE! 
-☀️ AFK FOR ~ {time}""")
+        await event.reply(f"""⚠️ 𝑨𝑻 𝑻𝑯𝑬 𝑴𝑶𝑴𝑬𝑵𝑻 𝑰'𝑴 𝑶𝑭𝑭𝑳𝑰𝑵𝑬.
+𝑺𝑶 𝑷𝑳𝑬𝑨𝑺𝑬 𝑫𝑶𝑵'𝑻 𝑺𝑷𝑨𝑴 𝑰𝑵 𝑴𝒀 𝑪𝑯𝑨𝑻, 𝑻𝑯𝑨𝑵𝑲𝑺 🔥 
+𝑰'𝑳𝑳 𝑨𝑵𝑺𝑾𝑬𝑹 𝑨𝑺 𝑺𝑶𝑶𝑵 𝑨𝑺 𝑷𝑶𝑺𝑰𝑩𝑳𝑬! 
+☀️ 𝑨𝑭𝑲 𝑭𝑶𝑹 ~ {time}""")
 
 @bot.on(events.NewMessage(incoming=True))
 async def alert(event):
@@ -58,6 +58,6 @@ async def alert(event):
     if me.last_name == "📚Studying📖":
         now = datetime.now()
         time = str((now - timeset))[:-6]
-        await event.reply(f"""⚠️ AT THE MOMENT I'M STUDYING.
-SO PLEASE DON'T SPAM IN MY CHAT, THANKS 🔥 
-I'LL ANSWER AS SOON AS POSIBLE!""")
+        await event.reply(f"""𝑨𝑻 𝑻𝑯𝑬 𝑴𝑶𝑴𝑬𝑵𝑻 𝑰'𝑴 𝑶𝑭𝑭𝑳𝑰𝑵𝑬.
+𝑺𝑶 𝑷𝑳𝑬𝑨𝑺𝑬 𝑫𝑶𝑵'𝑻 𝑺𝑷𝑨𝑴 𝑰𝑵 𝑴𝒀 𝑪𝑯𝑨𝑻, 𝑻𝑯𝑨𝑵𝑲𝑺 🔥 
+𝑰'𝑳𝑳 𝑨𝑵𝑺𝑾𝑬𝑹 𝑨𝑺 𝑺𝑶𝑶𝑵 𝑨𝑺 𝑷𝑶𝑺𝑰𝑩𝑳𝑬!""")
