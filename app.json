@@ -67,7 +67,6 @@
     "TG_BOT_TOKEN_BF_HER": {
       "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the token of your bot.Worth it. Get it.",
       "value": "",
-      "required": false
     },
     "CHROME_BIN": {
       "description": "For Carbon.py. Leave as it is. ",
@@ -82,7 +81,6 @@
     "TG_BOT_USER_NAME_BF_HER": {
       "description": "Needed for inline buttons maker. Make a bot at http://telegram.dog/BotFather and get the username of your bot",
       "value": "",
-      "required": false
     },
      "PRIVATE_GROUP_BOT_API_ID": {
       "description": "create private group and add rose then type /id",
