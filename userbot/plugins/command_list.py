@@ -1,41 +1,20 @@
-from userbot import CMD_LIST
+from telethon import events
+import subprocess
+import asyncio
+import time
 
-@command(pattern="^.help ?(.*)")
-async def cmd_list(event):
-    if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
-        tgbotusername = Var.TG_BOT_USER_NAME_BF_HER
-        input_str = event.pattern_match.group(1)
-        if tgbotusername is None or input_str == "text":
-            string = ""
-            for i in CMD_LIST:
-                string += "ℹ️ " + i + "\n"
-                for iter_list in CMD_LIST[i]:
-                    string += "    `" + str(iter_list) + "`"
-                    string += "\n"
-                string += "\n"
-            if len(string) > 4095:
-                await borg.send_message(event.chat_id, "Do .help cmd")
-                await asyncio.sleep(5)
-            else:
-                await event.edit(string)
-        elif input_str:
-            if input_str in CMD_LIST:
-                string = "Commands found in {}:\n".format(input_str)
-                for i in CMD_LIST[input_str]:
-                    string += "    " + i
-                    string += "\n"
-                await event.edit(string)
-            else:
-                await event.edit(input_str + " is not a valid plugin!")
-        else:
-            help_string = "𝒀𝒐𝒖 𝒄𝒐𝒏𝒕𝒂𝒄𝒕𝒆𝒅 𝒖𝒃𝒐𝒕 𝒔𝒖𝒑𝒑𝒐𝒓𝒕\n𝑻𝒐 𝒓𝒆𝒗𝒆𝒂𝒍 𝒂𝒍𝒍 𝒕𝒉𝒆 𝒄𝒐𝒎𝒎𝒂𝒏𝒅\n__𝑫𝒐 .𝒉𝒆𝒍𝒑 𝒑𝒍𝒖𝒈𝒊𝒏_𝒏𝒂𝒎𝒆 𝒇𝒐𝒓 𝒄𝒐𝒎𝒎𝒂𝒏𝒅.__"""
-            results = await bot.inline_query(  # pylint:disable=E0602
-                tgbotusername,
-                help_string
-            )
-            await results[0].click(
-                event.chat_id,
-                reply_to=event.reply_to_msg_id,
-                hide_via=True
-            )
-            await event.delete()
+
+@command(pattern="^.cmds", outgoing=True)
+async def install(event):
+    if event.fwd_from:
+        return
+    cmd = "ls userbot/plugins"
+    process = await asyncio.create_subprocess_shell(
+        cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+    )
+    stdout, stderr = await process.communicate()
+    o = stdout.decode()
+    _o = o.split("\n")
+    o = "\n".join(_o)
+    OUTPUT = f"**List of Plugins:**\n{o}\n\n**TIP:** 𝑰𝒇 𝒚𝒐𝒖 𝒘𝒂𝒏𝒕 𝒕𝒐 𝒌𝒏𝒐𝒘 𝒕𝒉𝒆 𝒄𝒐𝒎𝒎𝒂𝒏𝒅𝒔 𝒇𝒐𝒓 𝒂 𝒑𝒍𝒖𝒈𝒊𝒏, 𝒅𝒐:- \n .𝒉𝒆𝒍𝒑 <𝒑𝒍𝒖𝒈𝒊𝒏 𝒏𝒂𝒎𝒆>` **𝒘𝒊𝒕𝒉𝒐𝒖𝒕 𝒕𝒉𝒆 < > 𝒃𝒓𝒂𝒄𝒌𝒆𝒕𝒔.**\n 𝑨𝒍𝒍 𝒑𝒍𝒖𝒈𝒊𝒏𝒔 𝒎𝒊𝒈𝒉𝒕 𝒏𝒐𝒕 𝒘𝒐𝒓𝒌 𝒅𝒊𝒓𝒆𝒄𝒕𝒍𝒚."
+    await event.edit(OUTPUT)
