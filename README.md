@@ -1,5 +1,5 @@
 # FORK AT YOUR OWN RISK
-#### THIS IS CUSTOM FORK FROM SnapDragon
+#### THIS IS CUSTOM FORK FROM SnapDragon/Anubis
 ### The Easy Way
 
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
