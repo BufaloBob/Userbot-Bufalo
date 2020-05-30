@@ -26,7 +26,7 @@ async def _(event):
 
         return
 
-    animation_interval = 3
+    animation_interval = 1
 
     animation_ttl = range(0, 117)
 
@@ -41,7 +41,6 @@ async def _(event):
 
             "️┏━━━┓\n┃┏━━┛\n┃┗━┓\n┃┏━┛\n┃┃\n┗┛ \n\n\PRESS F TO PAY RESPECT" 
             
-            await asyncio.sleep(5)
             
         ]
 
