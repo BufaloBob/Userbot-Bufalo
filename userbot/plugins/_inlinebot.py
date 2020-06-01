@@ -17,7 +17,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             rev_text = query[::-1]
             buttons = paginate_help(0, CMD_LIST, "helpme")
             result = builder.article(
-                "© Userbot Help",
+                "© Custom Userbot Help",
                 text="{}\nCurrently Loaded Plugins: {}".format(
                     query, len(CMD_LIST)),
                 buttons=buttons,
@@ -36,7 +36,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Please get your own Userbot, and don't use mine!"
+            reply_pop_up_alert = "𝐏𝐥𝐞𝐚𝐬𝐞 𝐠𝐞𝐭 𝐲𝐨𝐮𝐫 𝐨𝐰𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭, 𝐚𝐧𝐝 𝐝𝐨𝐧'𝐭 𝐮𝐬𝐞 𝐦𝐢𝐧𝐞!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 
@@ -55,7 +55,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Please get your own Userbot, and don't use mine!"
+            reply_pop_up_alert = "𝐏𝐥𝐞𝐚𝐬𝐞 𝐠𝐞𝐭 𝐲𝐨𝐮𝐫 𝐨𝐰𝐧 𝐔𝐬𝐞𝐫𝐛𝐨𝐭, 𝐚𝐧𝐝 𝐝𝐨𝐧'𝐭 𝐮𝐬𝐞 𝐦𝐢𝐧𝐞!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"us_plugin_(.*)")
@@ -74,11 +74,11 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
             reply_pop_up_alert = help_string
         reply_pop_up_alert += "\n Use .unload {} to remove this plugin\n\
-            © Userbot".format(plugin_name)
+            © Custom Userbot The_Killer_Bob ".format(plugin_name)
         try:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         except: 
-            halps = "Do .help {} to get the list of commands.".format(plugin_name)
+            halps = "𝐃𝐨 .𝐡𝐞𝐥𝐩 {} 𝐭𝐨 𝐠𝐞𝐭 𝐭𝐡𝐞 𝐥𝐢𝐬𝐭 𝐨𝐟 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐬.".format(plugin_name)
             await event.answer(halps, cache_time=0, alert=True)
 
 def paginate_help(page_number, loaded_plugins, prefix):
@@ -90,7 +90,7 @@ def paginate_help(page_number, loaded_plugins, prefix):
             helpable_plugins.append(p)
     helpable_plugins = sorted(helpable_plugins)
     modules = [custom.Button.inline(
-        "{} {}".format("ℹ️", x),
+        "{} {}".format("⭐️", x),
         data="us_plugin_{}".format(x))
         for x in helpable_plugins]
     pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
