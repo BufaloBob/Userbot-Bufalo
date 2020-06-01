@@ -34,7 +34,7 @@ async def _(event):
             "🔴🔴🔴🔵🔵🔵\n🔴🔴🔴🔵🔵🔵\n🔴🔴🔴🔵🔵🔵",
             "🔵🔵🔵🔴🔴🔴\n🔵🔵🔵🔴🔴🔴\n🔵🔵🔵🔴🔴🔴",
             "🔴🔴🔴🔵🔵🔵\n🔴🔴🔴🔵🔵🔵\n🔴🔴🔴🔵🔵🔵",
-            "NINONINOO NINONINOOOO NINONINOOOOOO NINONINOOOOOO NINONINOOOOOO",
+            f"NINONINOO NINONINOOOO NINONINOOOOOO NINONINOOOOOO NINONINOOOOOO",
             "..........................................................🚓.",
             "......................................................🚓.....",
             "..................................................🚓.........",
