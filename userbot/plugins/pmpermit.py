@@ -13,7 +13,7 @@ CACHE = {}
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No name set yet nibba, check pinned message in** @TheKillerBob"
 USER_BOT_WARN_ZERO = "𝖸𝗈𝗎 𝖶𝖾𝗋𝖾 𝖲𝗉𝖺𝗆𝗆𝗂𝗇𝗀 𝖬𝗒 𝖡𝗈𝗌𝗌'𝗌 𝖨𝗇𝖻𝗈𝗑, 𝖧𝖾𝗇𝖼𝖾𝖿𝗈𝗋𝗍𝗁 𝖸𝗈𝗎𝗋 𝗋𝖾𝗍𝖺𝗋𝖽𝖾𝖽 𝖠𝗌𝗌 𝖧𝖺𝗌 𝖡𝖾𝖾𝗇 𝖡𝗅𝗈𝖼𝗄𝖾𝖽 𝖡𝗒 𝖬𝗒 𝖡𝗈𝗌𝗌'𝗌 𝖴𝗌𝖾𝗋𝖻𝗈𝗍."
-USER_BOT_NO_WARN = ("[𝑺𝑻𝑶𝑷 𝑺𝑷𝑨𝑴𝑴𝑰𝑵𝑮 𝑶𝑹 𝑰'𝑳𝑳 𝑩𝑳𝑶𝑪𝑲 𝒀𝑶𝑼](tg://user?id=528569326)\n\n"
+USER_BOT_NO_WARN = ("𝑺𝑻𝑶𝑷 𝑺𝑷𝑨𝑴𝑴𝑰𝑵𝑮 𝑶𝑹 𝑰'𝑳𝑳 𝑩𝑳𝑶𝑪𝑲 𝒀𝑶𝑼\n\n"
                     "__ 𝐻𝑒𝑙𝑙𝑜, 𝑡ℎ𝑖𝑠 𝑖𝑠 𝐾𝑖𝑙𝑙𝑒𝑟'𝑠 𝑆𝑒𝑐𝑢𝑟𝑖𝑡𝑦 𝑆𝑒𝑟𝑣𝑖𝑐𝑒.\n 𝑌𝑜𝑢'𝑟𝑒 𝑇𝑟𝑦𝑖𝑛𝑔 𝑇𝑜 𝐶𝑜𝑛𝑡𝑎𝑐𝑡 𝑀𝑦 𝐵𝑜𝑠𝑠.__"
                     f"{DEFAULTUSER}'s` inbox.\n\n"
                     "**Send /start so that we can decide why you're here.**")
@@ -36,7 +36,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, reason)
-                await event.edit("Approved Nibba [{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit("You Approved [{}](tg://user?id={})".format(firstname, chat.id))
                 await asyncio.sleep(3)
                 await event.delete()
 
@@ -50,7 +50,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             if not pmpermit_sql.is_approved(chat.id):
                 if not chat.id in PM_WARNS:
                     pmpermit_sql.approve(chat.id, "outgoing")
-                    bruh = "__𝑇ℎ𝑖𝑠 𝑁𝑖𝑏𝑏𝑎 𝑊𝑎𝑠 𝐴𝑝𝑝𝑟𝑜𝑣𝑒𝑑 𝐵𝑒𝑐𝑎𝑢𝑠𝑒 𝑌𝑜𝑢 𝑊𝑟𝑜𝑡𝑒 𝑇𝑜 𝐻𝑖𝑚__"
+                    bruh = "__𝑇ℎ𝑖𝑠 𝑁𝑜𝑜𝑏 𝑊𝑎𝑠 𝐴𝑝𝑝𝑟𝑜𝑣𝑒𝑑 𝐵𝑒𝑐𝑎𝑢𝑠𝑒 𝑌𝑜𝑢 𝑊𝑟𝑜𝑡𝑒 𝑇𝑜 𝐻𝑖𝑚__"
                     rko = await borg.send_message(event.chat_id, bruh)
                     await asyncio.sleep(3)
                     await rko.delete()
