@@ -1,5 +1,5 @@
 """Get Telegram Profile Picture and other information
-Syntax: .info @username"""
+Syntax: .whois @username"""
 
 import html
 from telethon.tl.functions.photos import GetUserPhotosRequest
@@ -29,14 +29,12 @@ async def _(event):
     except AttributeError as e:
         pass
     user_id = replied_user.user.id
-    # some people have weird HTML in their names
     first_name = html.escape(replied_user.user.first_name)
-    # https://stackoverflow.com/a/5072031/4723940
-    # some Deleted Accounts do not have first_name
     if first_name is not None:
-        # some weird people (like me) have more than 4096 characters in their names
         first_name = first_name.replace("\u2060", "")
-    # inspired by https://telegram.dog/afsaI181
+    last_name = replied_user.user.last_name
+    last_name = last_name.replace(
+        "\u2060", "") if last_name else ("Last Name not found")
     user_bio = replied_user.about
     if user_bio is not None:
         user_bio = html.escape(replied_user.about)
@@ -44,23 +42,24 @@ async def _(event):
     try:
         dc_id, location = get_input_location(replied_user.profile_photo)
     except Exception as e:
-        dc_id = "Need a Profile Picture to check **this**"
+        dc_id = "`Need a Profile Picture to check **this**`"
         location = str(e)
-    caption = """⚙️ DATABASE 
-    
-🔖 **ID:** <code>{}</code>
-🔍 **LINK PERMANENT TO PROFILE:** <a href='tg://user?id={}'>{}</a>
-✍️ **BIO:** {}
-🌏 **DC ID:** {}
-🖼 **PIC PROFILE:** {}
-🔏 **LIMITED:** {}
-🌐 **VERIFY:** {}
-🤖 **BOT:** {}
-👥 **GROUPS IN COMMNO:** {}
+    caption = """<b>Extracted Userdata From Killer's DATABASE<b>
+<b>ID</b>: <code>{}</code>
+<b>Person Name</b>: <a href='tg://user?id={}'>{}</a>
+<b>Last Name</b>:<code>{}</code>
+<b>Bio</b>: <code>{}</code>
+<b>DC ID</b>: {}
+<b>Number of PPs</b>: {}
+<b>Restricted?</b> : {}
+<b>Verified</b>: {}
+<b>Bot(nub)</b>: {}
+<b>Groups in Common</b>: {}
 """.format(
         user_id,
         user_id,
         first_name,
+        last_name,
         user_bio,
         dc_id,
         replied_user_profile_photos_count,
