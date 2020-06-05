@@ -9,14 +9,14 @@ async def name(event):
     style = "online"
     if style == "online":
         await bot(UpdateProfileRequest(last_name="✅ 𝑂𝑁𝐿𝐼𝑁𝐸"))
-        await event.edit("Now You Are ✅ 𝑂𝑁𝐿𝐼𝑁𝐸.")
+        await event.edit("Now You Are ✅ 𝑂𝑁𝐿𝐼𝑁𝐸. Created By @The_Killer_Bob")
 
 @command(pattern=r"^.offline")
 async def name(event):
     style = "online"
     if style == "online":
         await bot(UpdateProfileRequest(last_name="🚫 𝑂𝐹𝐹𝐿𝐼𝑁𝐸"))
-        await event.edit("Now You Are 🚫 𝑂𝐹𝐹𝐿𝐼𝑁𝐸.")
+        await event.edit("Now You Are 🚫 𝑂𝐹𝐹𝐿𝐼𝑁𝐸. Created By @The_Killer_Bob")
         timeset = datetime.now()
         
 @command(pattern=r"^.Studying")
@@ -24,7 +24,7 @@ async def name(event):
     style = "online"
     if style == "online":
         await bot(UpdateProfileRequest(last_name="📚Studying📖"))
-        await event.edit("Now You Are 📚Studying📖.")
+        await event.edit("Now You Are 📚Studying📖. Created By @The_Killer_Bob")
         timeset = datetime.now()
 
 @command(pattern=r"^.standby ?(.*)")
@@ -33,7 +33,7 @@ async def name(event):
     standby = event.pattern_match.group(1)
     if style == "online":
         await bot(UpdateProfileRequest(last_name=standby))
-        await event.edit("Now You Are" + standby)
+        await event.edit("Created By @The_Killer_Bob Now You Are " + standby)
 
 @bot.on(events.NewMessage(incoming=True))
 async def alert(event):
